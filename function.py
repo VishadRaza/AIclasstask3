@@ -29,15 +29,15 @@
 # multiplication(a,b)
 # division(a,b)
 
-def my_pet(owner, pet, city = "karachi"): # here city is default parameter
-    print(owner, "is an owner of ",pet, " they are from ", city)
-
-
-my_pet("Sarah", "Cat")  # position argument passing
-
-my_pet(pet="cat", owner="sarah")  # keyword argument passing
-
-my_pet(pet="cat", owner="Sarah", city="lahore")  # here city lahore will replace karachi
+# def my_pet(owner, pet, city = "karachi"): # here city is default parameter
+#     print(owner, "is an owner of ",pet, " they are from ", city)
+#
+#
+# my_pet("Sarah", "Cat")  # position argument passing
+#
+# my_pet(pet="cat", owner="sarah")  # keyword argument passing
+#
+# my_pet(pet="cat", owner="Sarah", city="lahore")  # here city lahore will replace karachi
 
 # 4 types of function
 # takes nothing return nothing
@@ -73,17 +73,49 @@ my_pet(pet="cat", owner="Sarah", city="lahore")  # here city lahore will replace
 # output = sum(a,b)
 # print(output)
 
-def number_check(a):
-    if a%2 ==0:
-        s = 0
-    else:
-        s =1
-    return s
+# def number_check(a):
+#     if a%2 ==0:
+#         s = 0
+#     else:
+#         s =1
+#     return s
+#
+#
+# a = int(input("enter number "))
+# z = number_check(a)
+# if z == 0:
+#     print(a , " is an even number")
+# else:
+#     print(a, " is an odd number")
 
+# -------x--------x-------
 
-a = int(input("enter number "))
-z = number_check(a)
-if z == 0:
-    print(a , " is an even number")
-else:
-    print(a, " is an odd number")
+# def pizza(crust, *topping):  # *means multiple values single * means tupple
+#    print("You have ordered a pizza with ",crust, " crust with a following topping ")
+#    for each in topping:
+#        print(each)
+#
+#
+# pizza("Thick", "Green olives", "Chicken", "Black Olives")
+
+# use of double *
+#cannot use single * on two arguments at same time
+# def pizza(crust, **topping): #double * means dictionaries
+#     print("You have orderes a pizza with ",crust," crust with the following toppings ")
+#     for key,value in topping.items():
+#         print(key, ": ",value)
+#
+# pizza("Thick",topping1 ="Green Olives", topping2 = "Chicken", topping3 ="black olives")
+
+def pizza(*crust, **topping): #double * means dictionaries
+    print("You have orderes a pizza with ",crust," crust with the following toppings ")
+    for value in topping.values():
+        print(value)
+
+pizza("Thick", "Thin",topping1 ="Green Olives", topping2 = "Chicken", topping3 ="black olives")
+
+#factorial
+#fabionnic
+
+#make aa function that takes order of jewelley/ grocery and its quantity in second function calculate bill 2 types of bill first total amount and individual
+#discount offer is bill is > 25000 25% discount <=15000 no discount if bill ?=50000 50% discount
